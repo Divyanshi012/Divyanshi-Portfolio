@@ -4,59 +4,77 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Divyanshi Nagar | Portfolio</title>
+  <meta name="description" content="Divyanshi Nagar, Data Engineer and AI/ML enthusiast in Bengaluru. Projects in predictive analytics, Power BI dashboards and workflow automation."/>
+  <meta name="theme-color" content="#080f0a"/>
 
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
+<div class="progress" id="progress"></div>
+
 <!-- NAVBAR -->
-<nav>
-  <div class="logo">
-    Divyanshi <span>Nagar.</span>
-  </div>
+<nav id="nav">
+  <a href="#home" class="logo">Divyanshi <span>Nagar.</span></a>
 
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#edu">Education</a></li>
     <li><a href="#exp">Experience</a></li>
     <li><a href="#proj">Projects</a></li>
+    <li><a href="#certs">Certifications</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+
+  <a href="#contact" class="nav-cta">Hire me</a>
+
+  <button class="hamburger" id="hamburger" type="button"
+          aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#edu">Education</a>
+  <a href="#exp">Experience</a>
+  <a href="#proj">Projects</a>
+  <a href="#certs">Certifications</a>
+  <a href="#contact">Contact</a>
+</div>
+
 <!-- HERO -->
-<section class="hero" id="home">
+<header class="hero" id="home">
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
 
   <div class="hero-content">
+    <div class="hero-chip">Open to Opportunities</div>
 
-    <div class="hero-chip">
-      Open to Opportunities
-    </div>
-
-    <p class="hero-greeting">
-      Hello! 👋
-    </p>
+    <p class="hero-greeting">Hello! 👋</p>
 
     <h1 class="hero-name">
-      <span class="first">I'm </span>
-      <span class="last">
-        Divyanshi <br> Nagar
-      </span>
+      <span class="first">I'm</span>
+      <span class="last">Divyanshi Nagar</span>
     </h1>
 
     <p class="hero-role">
-      Data Engineer & AI/ML Enthusiast
+      <span id="typed" data-words='["Data Engineer","AI/ML Enthusiast","Dashboard Builder","Pipeline Thinker"]'>Data Engineer</span><span class="caret"></span>
     </p>
 
     <p class="hero-bio">
-      Aspiring Data Engineer with hands-on experience
-      in data validation, ETL pipelines, predictive
-      analytics, and dashboards. Currently pursuing MCA
-      at PES University, building reliable, scalable
-      data solutions.
+      Aspiring Data Engineer with hands-on experience in data validation,
+      ETL pipelines, predictive analytics and dashboards. Currently pursuing
+      MCA at PES University, building reliable, scalable data solutions.
     </p>
 
     <div class="hero-tags">
@@ -67,168 +85,68 @@
     </div>
 
     <div class="hero-btns">
+      <a href="#proj" class="btn btn-primary">See My Work</a>
+      <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+      <a href="Divyanshi_Nagar_Resume.pdf" class="btn btn-ghost" download>⬇ Resume</a>
+    </div>
 
-      <a href="#proj" class="btn-p">
-        See My Work
-      </a>
-
-      <a href="#contact" class="btn-s">
-        Let's Talk
-      </a>
-
+    <div class="hero-social">
+      <a href="https://linkedin.com/in/divyanshi-nagar-3908a5271" target="_blank" rel="noopener">LinkedIn</a>
+      <span>·</span>
+      <a href="mailto:divyanshinagar12@gmail.com">Email</a>
+      <span>·</span>
+      <span>Bengaluru, India</span>
     </div>
   </div>
 
-  <div class="hero-visual">
-    <div class="hex-bg">
-      <div class="initials">
-        DN
+  <div class="hero-visual" aria-hidden="true">
+    <div class="orbit">
+      <div class="ring">
+        <div class="badge" style="--a:0deg"><span>Python</span></div>
+        <div class="badge" style="--a:72deg"><span>SQL</span></div>
+        <div class="badge" style="--a:144deg"><span>PySpark</span></div>
+        <div class="badge" style="--a:216deg"><span>Power BI</span></div>
+        <div class="badge" style="--a:288deg"><span>ML</span></div>
       </div>
+      <div class="hex-bg"><div class="initials">DN</div></div>
     </div>
   </div>
+</header>
 
-</section>
-
-<div class="divider"></div>
+<!-- TICKER -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track">
+    <div class="mq">
+      <span>Python</span><span>SQL</span><span>ETL Pipelines</span><span>Apache PySpark</span><span>PyFlink</span><span>Power BI</span><span>Streamlit</span><span>Scikit-learn</span><span>Oracle Cloud</span><span>Feature Engineering</span><span>Data Validation</span>
+    </div>
+    <div class="mq">
+      <span>Python</span><span>SQL</span><span>ETL Pipelines</span><span>Apache PySpark</span><span>PyFlink</span><span>Power BI</span><span>Streamlit</span><span>Scikit-learn</span><span>Oracle Cloud</span><span>Feature Engineering</span><span>Data Validation</span>
+    </div>
+  </div>
+</div>
 
 <!-- ABOUT -->
 <section class="section" id="about">
-
-  <div class="sec-label">
-    About Me
-  </div>
-
-  <h2 class="sec-title">
-    Who am I?
-  </h2>
+  <div class="sec-label">About Me</div>
+  <h2 class="sec-title reveal">Who <em>am I?</em></h2>
 
   <div class="about-grid">
-
-    <div>
-
+    <div class="reveal">
       <p class="about-p">
-        I'm a <strong>Data Engineer</strong> based in
-        <strong>Bengaluru, India</strong>, currently
-        pursuing my Master of Computer Applications
-        at <strong>PES University</strong>.
+        I'm a <strong>Data Engineer</strong> based in <strong>Bengaluru, India</strong>,
+        currently pursuing my Master of Computer Applications at <strong>PES University</strong>.
       </p>
-
       <p class="about-p">
-        I love turning raw, messy data into reliable,
-        actionable systems — from building predictive
-        ML models to interactive Power BI dashboards
-        and ETL pipelines.
+        I love turning raw, messy data into reliable, actionable systems, from predictive
+        ML models to interactive Power BI dashboards and ETL pipelines.
       </p>
-
       <p class="about-p">
-        I built a Power BI dashboard in collaboration
-        with the <strong>Deloitte US</strong> team and
-        completed professional training with
-        <strong>Deloitte Australia</strong>. I have also
-        worked on healthcare data systems, food security
-        AI, and workflow automation tools.
+        I built a Power BI dashboard in collaboration with the <strong>Deloitte US</strong> team and
+        completed professional training with <strong>Deloitte Australia</strong>. I have also worked on
+        healthcare data systems, food security AI and workflow automation tools.
       </p>
 
       <div class="contact-info">
-
-        <span>
-          📧 divyanshinagar12@gmail.com
-        </span>
-
-        <span>
-          📍 Bengaluru, India
-        </span>
-
-        <a href="https://linkedin.com/in/divyanshi-nagar-3908a5271"
-        target="_blank">
-
-          🔗 linkedin.com/in/divyanshi-nagar-3908a5271
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="stats-grid">
-
-      <div class="stat-card">
-        <span class="stat-num">1</span>
-        <span class="stat-lab">
-          Internship
-        </span>
-      </div>
-
-      <div class="stat-card">
-        <span class="stat-num">3</span>
-        <span class="stat-lab">
-          Projects Built
-        </span>
-      </div>
-
-      <div class="stat-card">
-        <span class="stat-num">6</span>
-        <span class="stat-lab">
-          Certifications
-        </span>
-      </div>
-
-      <div class="stat-card">
-        <span class="stat-num">8.85</span>
-        <span class="stat-lab">
-          CGPA
-        </span>
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- SKILLS -->
-  <div class="skills-grid">
-
-    <div class="skill-card">
-      <div class="skill-title">
-        ⚡ Technical Skills
-      </div>
-
-      <div class="pills">
-        <span class="pill g">Python</span>
-        <span class="pill g">SQL</span>
-        <span class="pill">ETL Pipelines</span>
-        <span class="pill">Apache PySpark</span>
-        <span class="pill">PyFlink</span>
-        <span class="pill">Streamlit</span>
-        <span class="pill">Scikit-learn</span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-title">
-        📊 Data & BI
-      </div>
-
-      <div class="pills">
-        <span class="pill g">Power BI</span>
-        <span class="pill">Data Analysis</span>
-        <span class="pill">Data Validation</span>
-        <span class="pill">Data Preprocessing</span>
-        <span class="pill">Feature Engineering</span>
-        <span class="pill">
-          Oracle Cloud DB
-        </span>
-        <span class="pill">
-          AI & ML
-        </span>
-      </div>
-    </div>
-
-    <div class="skill-card">
-      <div class="skill-title">
-        ☁️ Platforms & Cloud
-      </div>
-
-      <div class="pills">
-        <span class="pill g">
-          Google Cloud
-        </span>
+        <span>📧 divyanshinagar12@gmail.com</span>
+        <span>📍 Bengaluru, India</span>
+        <a href="https://linkedin.com/in/divyanshi-naga
